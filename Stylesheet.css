@@ -1,0 +1,231 @@
+/*Mobile view*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+    background-color: white;
+    color: #2c2c2c;
+  }
+
+  
+  /* Header css*/
+  
+  header {
+    background-color: #CDC6A5;
+    border-bottom: 2px solid white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  #header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+    display:block
+  }
+
+  body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: #2c2c2c;
+    align-items: center;
+  }
+  
+  /*body css - index pagina*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  #Woonplaats {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    padding: 80px 10px;
+    color: white;
+
+    background-image: url(Afbeeldingen/Paulus\ kerk\ Dongen.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+  
+  /*het centrale sectie: mobiel = onder elkaar*/
+
+  #Central-section {
+  display: block;
+  padding: 20px;
+}
+
+  /*het linkerdeel*/
+
+  #Left-section {
+   width: 100%;
+   background-color: #ceccc4; 
+   padding: 20px;
+  }
+
+
+  /*het rechterdeel*/
+
+  #Right-section {
+   width: 100%;
+   background-color:#f1f1ed;
+   padding: 20px;
+  }
+
+  #fact-list {
+   padding-left: 10px;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  /*elk artikel container bevat een tekt en afbeelding*/
+
+  .Article-container {
+  margin-bottom: 30px;
+}
+
+  .Article-container article {
+    display: block;
+    text-align: left;
+  }
+
+  .Article-container img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .Float-example {
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+
+  .Float-example img {
+   float: none;
+   width: 100%;
+   max-width: 250px;
+   margin: 10px auto;
+   display: block;
+  }
+
+
+  /*Footer css*/
+
+  #footer-container {
+   background-color: #CDC6A5;
+   padding: 20px;
+   text-align: center;
+  }
+  
+  
+  #footer-text-section {
+   color: white;
+   font-size: 15px;
+  }
+
+  /* MEDIA QUERY'S */
+
+  /* TABLET (vanaf 768px) */
+  @media (min-width: 768px) {
+   #Central-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+   #Left-section {
+    grid-column: span 3;
+  }
+
+   #Right-section {
+    grid-column: span 9;
+  }
+
+   .Article-container article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+  }
+
+   .Article-container img {
+    width: 150px;
+    margin: 0;
+  }
+
+   .Float-example img {
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+  }
+
+   #Woonplaats {
+    font-size: 32px;
+    padding: 100px 30px;
+  }
+}
+
+/* DESKTOP (vanaf 1025px) */
+@media (min-width: 1025px) {
+  .logo {
+    height: 122px;
+    width: 200px;
+  }
+
+  #Woonplaats {
+    font-size: 36px;
+    padding: 150px;
+  }
+
+  #Central-section {
+    padding: 50px;
+  }
+
+  .Article-container img {
+    width: 300px;
+    margin: 0;
+  }
+
+  #text-2 {
+    padding-left: 54px ;
+  }
+
+  .Article-container article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    margin-bottom:-30px
+  }
+
+  #fact-list {
+    padding-left: 10px;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+  
+}
